@@ -3180,7 +3180,6 @@ type Query {
   queues returns information on queues used in Coral to manage
   """
   queues: Queues! @auth(roles: [ADMIN])
-  dailyCounts: DailyCounts!
 }
 
 ################################################################################
