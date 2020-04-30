@@ -3061,7 +3061,7 @@ type Query {
   """
   comment returns a specific comment.
   """
-  comment(id: ID!): Comment
+  comment(id: ID!): Comment @auth
 
   """
   comments returns a filtered comments connection that can be paginated. This is
@@ -3081,13 +3081,13 @@ type Query {
   """
   story is a specific article that can be identified by either an ID or a URL.
   """
-  story(id: ID, url: String): Story
+  story(id: ID, url: String): Story @auth
 
   """
   stream will load a specific story that can be identified by either an ID or a
   URL and will create the story if that feature is enabled.
   """
-  stream(id: ID, url: String): Story
+  stream(id: ID, url: String): Story @auth
 
   """
   stories returns filtered stories that can be paginated.
